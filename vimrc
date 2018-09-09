@@ -168,9 +168,9 @@ xnoremap <leader><Space>     <C-f>
 " clear hlsearch
 nnoremap <silent> Q          :noh<CR>
 
-" open files down the tree
+" search for files down the tree
 nnoremap <leader>e           :e **/*
-nnoremap <leader>o           :arga **/*
+nnoremap <leader>a           :arga **/*
 
 " system clipboard copy/paste
 nnoremap <leader>y           "+y
@@ -217,9 +217,9 @@ nnoremap <silent> gJ         :tabmove +1<CR>
 " ### EasyAlign
 nmap     ga                  <Plug>(EasyAlign)
 xmap     ga                  <Plug>(EasyAlign)
-nmap     <leader>a           :packadd vim-easy-align <bar>
+nmap     <leader>A           :packadd vim-easy-align <bar>
                                 \ echo 'easy-align loaded'<CR>
-xmap     <leader>a           :<C-u>packadd vim-easy-align <bar>
+xmap     <leader>A           :<C-u>packadd vim-easy-align <bar>
                                 \ echo 'easy-align loaded'<CR>gv
 
 " ### Sneak

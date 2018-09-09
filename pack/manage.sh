@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # vim8 package manager with AIDS
 
 # pak_type:
