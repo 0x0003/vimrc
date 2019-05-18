@@ -33,7 +33,7 @@ let g:ale_open_list = 1 " automate :lopen
 
 "   =============== General options  ==========
 syntax on
-colorscheme tuna
+colorscheme monochrome
 
 set langnoremap
 set autoindent
