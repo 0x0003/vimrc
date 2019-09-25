@@ -8,7 +8,7 @@ set background=dark
 
 hi clear
 if exists('syntax_on')
-   syntax reset
+  syntax reset
 endif
 
 let g:colors_name = 'monochrome'
@@ -36,29 +36,29 @@ let s:default_lst = []
 let s:default_str = ''
 
 function! s:hi(...)
-    let group = a:1
-    let fg    = get(a:, 2, s:default_fg)
-    let bg    = get(a:, 3, s:default_bg)
-    let attr  = get(a:, 4, s:default_str)
+  let group = a:1
+  let fg    = get(a:, 2, s:default_fg)
+  let bg    = get(a:, 3, s:default_bg)
+  let attr  = get(a:, 4, s:default_str)
 
-    let cmd = ['hi', group]
+  let cmd = ['hi', group]
 
-    if fg != s:default_lst
-        call add(cmd, 'guifg='.fg[0])
-        call add(cmd, 'ctermfg='.fg[1])
-    endif
+  if fg != s:default_lst
+    call add(cmd, 'guifg='.fg[0])
+    call add(cmd, 'ctermfg='.fg[1])
+  endif
 
-    if bg != s:default_lst && bg != s:default_bg
-        call add(cmd, 'guibg='.bg[0])
-        call add(cmd, 'ctermbg='.bg[1])
-    endif
+  if bg != s:default_lst && bg != s:default_bg
+    call add(cmd, 'guibg='.bg[0])
+    call add(cmd, 'ctermbg='.bg[1])
+  endif
 
-    if attr != s:default_str
-        call add(cmd, 'gui='.attr)
-        call add(cmd, 'cterm='.attr)
-    endif
+  if attr != s:default_str
+    call add(cmd, 'gui='.attr)
+    call add(cmd, 'cterm='.attr)
+  endif
 
-    exec join(cmd, ' ')
+  exec join(cmd, ' ')
 endfunction
 
 
