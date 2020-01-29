@@ -31,6 +31,19 @@ let g:sneak#target_labels = ";jkisdtghuvnq/"
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_open_list = 1 " automate :lopen
 
+" ### netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+let g:netrw_list_hide = &wildignore
+
+augroup netrw_mappings
+  autocmd!
+  autocmd filetype netrw call netrwmappings#rebind()
+augroup END
+
 "   =============== General options  ==========
 syntax on
 colorscheme monochrome
@@ -229,6 +242,9 @@ xmap <leader>j <Plug>Sneak_s
 xmap <leader>k <Plug>Sneak_S
 omap <leader>j <Plug>Sneak_s
 omap <leader>k <Plug>Sneak_S
+
+" ### netrw
+nnoremap <silent> <leader>E :Vexplore<cr>
 
 " ### plugin toggles
 nnoremap <leader>c           :packadd colorizer<CR>:ColorToggle<CR>
