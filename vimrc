@@ -173,9 +173,11 @@ xnoremap >                   >gv
 xnoremap <                   <gv
 
 " space as pgup and pgdown
-nnoremap <C-@>               <C-b>
-nnoremap <leader><Space>     <C-f>
+nnoremap <C-Space>           <C-b>
 xnoremap <C-@>               <C-b>
+nnoremap <leader><Space>     <C-f>
+xnoremap <C-Space>           <C-b>
+xnoremap <C-@>               <C-f>
 xnoremap <leader><Space>     <C-f>
 
 " clear hlsearch
@@ -244,7 +246,7 @@ omap <leader>j <Plug>Sneak_s
 omap <leader>k <Plug>Sneak_S
 
 " ### netrw
-nnoremap <silent> <leader>E :Vexplore<cr>
+nnoremap <silent> <leader>E :Vexplore<CR>
 
 " ### plugin toggles
 nnoremap <leader>c           :packadd colorizer<CR>:ColorToggle<CR>
