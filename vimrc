@@ -177,7 +177,7 @@ nnoremap <C-Space>           <C-b>
 xnoremap <C-@>               <C-b>
 nnoremap <leader><Space>     <C-f>
 xnoremap <C-Space>           <C-b>
-xnoremap <C-@>               <C-f>
+xnoremap <C-@>               <C-b>
 xnoremap <leader><Space>     <C-f>
 
 " clear hlsearch
