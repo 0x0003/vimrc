@@ -199,19 +199,19 @@ xnoremap @                   :<C-u>call visualmacro#At()<CR>
 " ruler and showcmd
 nnoremap <silent> <leader>u  :set ruler! showcmd!<CR>:redraw!<CR>
 
-" ### marks
+" marks
 nnoremap <silent> <leader>m  :marks<CR>:normal '
 nnoremap `                   '
 nnoremap '                   `
 
-" ### buffers
+" buffers
 nnoremap <leader>l           :ls<CR>:b<Space>
 nnoremap <leader>d           :ls<CR>:bd<Space>
 nnoremap <silent> <leader>n  :bn<CR>
 nnoremap <silent> <leader>p  :bp<CR>
 nnoremap <silent> <BS>       <C-^>
 
-" ### splits
+" splits
 nnoremap <silent> <C-h>      :call mvsplit#Mv ('h')<CR>
 nnoremap <silent> <C-j>      :call mvsplit#Mv ('j')<CR>
 nnoremap <silent> <C-k>      :call mvsplit#Mv ('k')<CR>
@@ -224,7 +224,7 @@ nnoremap <silent> <Left>     :vertical resize -3<CR>
 nnoremap <silent> <Down>     :resize +3<CR>
 nnoremap <silent> <Up>       :resize -3<CR>
 
-" ### tabs
+" tabs
 nnoremap <silent> <leader>t  :tabnew<CR>
 nnoremap <silent> gK         :tabmove -1<CR>
 nnoremap <silent> gJ         :tabmove +1<CR>
