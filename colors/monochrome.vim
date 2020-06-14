@@ -21,8 +21,10 @@ let s:cgray  = ['#737373', 8]
 let s:dgray  = ['DarkGray', 0]
 let s:sblue  = ['#778899', 15]
 let s:yellow = ['Yellow', 226]
-let s:red    = ['#b6403a', 1]
+let s:red    = ['#b6403a', 210]
 let s:green  = ['#478226', 2]
+let s:diffa  = ['#00ff00', 186]
+let s:diffr  = ['#ff0000', 174]
 
 let s:default_fg = s:lgray
 let s:default_bg = s:black
@@ -70,9 +72,10 @@ call s:hi('Cursor', s:black, s:lgray)
 call s:hi('CursorLine', s:default_lst, s:bgray, s:none)
 call s:hi('CursorLineNr', s:white, s:default_bg, s:bold)
 call s:hi('ColorColumn', s:default_fg, s:bgray)
-call s:hi('Search', s:cgray, s:green)
+call s:hi('Search', s:dgray, s:green)
 call s:hi('Visual', s:cgray, s:white)
-call s:hi('ErrorMsg', s:cgray, s:red)
+call s:hi('ErrorMsg', s:black, s:red)
+call s:hi('Error', s:black, s:red)
 
 " Tildes at the bottom of a buffer, etc.
 call s:hi('NonText', s:dgray)
@@ -198,8 +201,8 @@ call s:hi('diffNewFile', s:cgray)
 call s:hi('diffIndexLine', s:cgray)
 call s:hi('diffLine', s:cgray)
 call s:hi('diffSubname', s:cgray)
-call s:hi('diffAdded', s:white, s:green)
-call s:hi('diffRemoved', s:white, s:red)
+call s:hi('diffAdded', s:diffa)
+call s:hi('diffRemoved', s:diffr)
 
 
 "
