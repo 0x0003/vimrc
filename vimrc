@@ -32,6 +32,12 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 let g:ale_open_list = 'on_save'
 
+" ### commentary.vim
+augroup commentary
+  autocmd!
+  autocmd FileType autohotkey setlocal commentstring=;\ %s
+augroup END
+
 " ### netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
