@@ -46,6 +46,8 @@ wait
 group quality start
 # delete, change and add surroundings in pairs
 pak https://github.com/machakann/vim-sandwich.git &
+# comments
+pak https://github.com/tpope/vim-commentary.git &
 # display lines at each indent level
 pak https://github.com/nathanaelkane/vim-indent-guides.git &
 # new motion
