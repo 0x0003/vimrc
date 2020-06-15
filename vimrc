@@ -29,7 +29,8 @@ let g:sneak#target_labels = ";jkisdtghuvnq/"
 
 " ### ALE
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_open_list = 1 " automate :lopen
+let g:ale_lint_on_insert_leave = 0
+let g:ale_open_list = 'on_save'
 
 " ### netrw
 let g:netrw_banner = 0
