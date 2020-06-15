@@ -218,12 +218,13 @@ call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 " --- Plugins ------------------------------------------------------------------
 "
 " IndentGuides
-" #121212  terminal bg
-hi IndentGuidesOdd  ctermbg=234
-hi IndentGuidesEven ctermbg=235
-"" #1b1b1b terminal bg
-" hi IndentGuidesOdd  ctermbg=235
-" hi IndentGuidesEven ctermbg=236
+" " #121212  terminal bg
+" hi IndentGuidesOdd  ctermbg=234
+" hi IndentGuidesEven ctermbg=235
+
+" #1b1b1b terminal bg
+hi IndentGuidesOdd  ctermbg=235
+hi IndentGuidesEven ctermbg=236
 
 " Sneak
 hi Sneak      ctermfg=0 ctermbg=2 cterm=NONE
