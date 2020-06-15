@@ -23,7 +23,7 @@ let s:sblue  = ['#778899', 15]
 let s:yellow = ['Yellow', 226]
 let s:red    = ['#b6403a', 210]
 let s:green  = ['#478226', 2]
-let s:diffa  = ['#00ff00', 186]
+let s:diffa  = ['#00ff00', 193]
 let s:diffr  = ['#ff0000', 174]
 
 let s:default_fg = s:lgray
@@ -218,10 +218,14 @@ call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 " --- Plugins ------------------------------------------------------------------
 "
 " IndentGuides
-hi IndentGuidesOdd  ctermbg=235
-hi IndentGuidesEven ctermbg=236
+" #121212  terminal bg
+hi IndentGuidesOdd  ctermbg=234
+hi IndentGuidesEven ctermbg=235
+"" #1b1b1b terminal bg
+" hi IndentGuidesOdd  ctermbg=235
+" hi IndentGuidesEven ctermbg=236
 
 " Sneak
-hi Sneak      ctermfg=8 ctermbg=2 cterm=NONE
-hi SneakLabel ctermfg=8 ctermbg=2 cterm=NONE
+hi Sneak      ctermfg=0 ctermbg=2 cterm=NONE
+hi SneakLabel ctermfg=0 ctermbg=2 cterm=NONE
 
