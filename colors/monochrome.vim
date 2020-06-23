@@ -226,7 +226,3 @@ call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 hi IndentGuidesOdd  ctermbg=235
 hi IndentGuidesEven ctermbg=236
 
-" Sneak
-hi Sneak      ctermfg=0 ctermbg=2 cterm=NONE
-hi SneakLabel ctermfg=0 ctermbg=2 cterm=NONE
-

@@ -1,10 +1,10 @@
 filetype plugin indent on
 
-"   =============== Plugins ===================
-" ### Completor
+"" PLUGINS
+" # Completor
 let g:completor_completion_delay = 1 " milliseconds
 
-" ### UltiSnips
+" # UltiSnips
 let g:UltiSnipsEditSplit = "vertical"
 " mappings
 let g:UltiSnipsExpandTrigger = "<c-j>"
@@ -15,30 +15,25 @@ let g:UltiSnipsSnippetDirectories = ['snip', 'UltiSnips']
 " personal snippets dir
 let g:UltiSnipsSnippetsDir = "~/.vim/snip"
 
-" ### IndentGuides
+" # IndentGuides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 4
 let g:indent_guides_tab_guides = 0
 let g:indent_guides_default_mapping = 0
 
-" ### Sneak
-let g:sneak#label = 1      " label mode
-let g:sneak#use_ic_scs = 1 " case insensitive
-let g:sneak#target_labels = ";jkisdtghuvnq/"
-
-" ### ALE
+" # ALE
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 let g:ale_open_list = 'on_save'
 
-" ### commentary.vim
+" # commentary.vim
 augroup commentary
   autocmd!
   autocmd FileType autohotkey setlocal commentstring=;\ %s
 augroup END
 
-" ### netrw
+" # netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
@@ -51,7 +46,7 @@ augroup netrw_mappings
   autocmd filetype netrw call netrwmappings#rebind()
 augroup END
 
-"   =============== General options  ==========
+"" GENERAL
 syntax on
 colorscheme monochrome
 
@@ -117,7 +112,7 @@ set shiftwidth=2
 set listchars=tab:■■,trail:»,nbsp:■
 set list
 
-" always jump to the last known cursor position
+" jump to last known cursor position when opening vim
 augroup curpos
   autocmd!
   autocmd BufReadPost *
@@ -153,18 +148,14 @@ augroup sess
   autocmd VimLeave * :call sessions#Make()
 augroup END
 
-"   =============== Custom commands ===========
-" diff against original file
-command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-  \ | setlocal cursorline | wincmd p | diffthis | setlocal cursorline
-
+"" CUSTOM COMMANDS
 " trim trailing whitespaces
 command! Trim call trimspace#Trim()
 
 " clear quickfix/clist
 command! Cclear cexpr []
 
-"   =============== Mappings ==================
+"" MAPPINGS
 " leader
 let mapleader = "\<Space>"
 
@@ -173,11 +164,7 @@ nnoremap <silent> <leader>w  :update<CR>
 xnoremap <silent> <leader>w  <esc>:update<CR>gv
 
 " reload vimrc
-nnoremap <silent> <leader>r  :source ~/.vim/vimrc<CR>
-
-" change indent levels without leaving visual mode
-xnoremap >                   >gv
-xnoremap <                   <gv
+nnoremap <silent> <leader>R  :source ~/.vim/vimrc<CR>
 
 " space as pgup and pgdown
 nnoremap <C-Space>           <C-b>
@@ -190,10 +177,6 @@ xnoremap <leader><Space>     <C-f>
 " clear hlsearch
 nnoremap <silent> Q          :noh<CR>
 
-" search for files down the tree
-nnoremap <leader>e           :e **/*
-nnoremap <leader>a           :arga **/*
-
 " system clipboard copy/paste
 nnoremap <leader>y           "+y
 nnoremap <leader>Y           "+Y
@@ -204,12 +187,16 @@ nnoremap <silent> <leader>P  :set paste<CR>"+p:set nopaste<CR>
 xnoremap @                   :<C-u>call visualmacro#At()<CR>
 
 " ruler and showcmd
-nnoremap <silent> <leader>u  :set ruler! showcmd!<CR>:redraw!<CR>
+nnoremap <silent> <leader>r  :set ruler! showcmd!<CR>:redraw!<CR>
 
 " marks
 nnoremap <silent> <leader>m  :marks<CR>:normal '
 nnoremap `                   '
 nnoremap '                   `
+
+" open files down the tree
+nnoremap <leader>e           :e **/*
+nnoremap <leader>a           :arga **/*
 
 " buffers
 nnoremap <leader>l           :ls<CR>:b<Space>
@@ -219,13 +206,11 @@ nnoremap <silent> <leader>p  :bp<CR>
 nnoremap <silent> <BS>       <C-^>
 
 " splits
+nnoremap <silent> <leader>f  :close<CR>
 nnoremap <silent> <C-h>      :call mvsplit#Mv ('h')<CR>
 nnoremap <silent> <C-j>      :call mvsplit#Mv ('j')<CR>
 nnoremap <silent> <C-k>      :call mvsplit#Mv ('k')<CR>
 nnoremap <silent> <C-l>      :call mvsplit#Mv ('l')<CR>
-nnoremap <silent> <leader>f  :close<CR>
-nnoremap <silent> <leader>sm :call swpsplit#Mark()<CR>
-nnoremap <silent> <leader>sw :call swpsplit#Swap()<CR>
 nnoremap <silent> <Right>    :vertical resize +3<CR>
 nnoremap <silent> <Left>     :vertical resize -3<CR>
 nnoremap <silent> <Down>     :resize +3<CR>
@@ -236,7 +221,7 @@ nnoremap <silent> <leader>t  :tabnew<CR>
 nnoremap <silent> gK         :tabmove -1<CR>
 nnoremap <silent> gJ         :tabmove +1<CR>
 
-" ### EasyAlign
+" EasyAlign
 nmap     ga                  <Plug>(EasyAlign)
 xmap     ga                  <Plug>(EasyAlign)
 nmap     <leader>A           :packadd vim-easy-align <bar>
@@ -244,21 +229,12 @@ nmap     <leader>A           :packadd vim-easy-align <bar>
 xmap     <leader>A           :<C-u>packadd vim-easy-align <bar>
                                 \ echo 'easy-align loaded'<CR>gv
 
-" ### Sneak
-nmap <leader>j <Plug>Sneak_s
-nmap <leader>k <Plug>Sneak_S
-xmap <leader>j <Plug>Sneak_s
-xmap <leader>k <Plug>Sneak_S
-omap <leader>j <Plug>Sneak_s
-omap <leader>k <Plug>Sneak_S
+" netrw
+nnoremap <silent> <leader>E  :Vexplore<CR>
 
-" ### netrw
-nnoremap <silent> <leader>E :Vexplore<CR>
+" undo tree
+nnoremap <silent> <leader>u  :UndotreeToggle<CR>
 
-" ### plugin toggles
+" opt plugins
 nnoremap <leader>c           :packadd colorizer<CR>:ColorToggle<CR>
-nnoremap <silent> <leader>g  :packadd goyo.vim<CR>:Goyo <bar>
-                                \ hi StatusLineNC ctermfg=235 <bar>
-                                \ set nonu nornu <bar>
-                                \ IndentGuidesToggle<CR>
 

@@ -5,8 +5,7 @@
 #   start - load on startup
 #   opt - load on demand with :packadd
 # NOTE: opt packages won't generate help docs
-function group ()
-{
+function group () {
   group_name=$1
   pak_type=$2
   group_path="$HOME/.vim/pack/$group_name/$pak_type"
@@ -14,8 +13,7 @@ function group ()
   cd "$group_path" || exit
 }
 
-function pak ()
-{
+function pak () {
   repo_url=$1
   expected_repo=$(basename "$repo_url" .git)
   if [ -d "$expected_repo" ]; then
@@ -50,8 +48,8 @@ pak https://github.com/machakann/vim-sandwich.git &
 pak https://github.com/tpope/vim-commentary.git &
 # display lines at each indent level
 pak https://github.com/nathanaelkane/vim-indent-guides.git &
-# new motion
-pak https://github.com/justinmk/vim-sneak.git &
+# undo tree
+pak https://github.com/mbbill/undotree.git &
 wait
 ) &
 
@@ -59,10 +57,8 @@ wait
 group quality opt
 # highlight rgb and hex colors
 pak https://github.com/vim-scripts/colorizer.git &
-# alignment
+# auto alignment
 pak https://github.com/junegunn/vim-easy-align.git &
-# distraction-free writing
-pak https://github.com/junegunn/goyo.vim.git &
 wait
 ) &
 

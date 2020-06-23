@@ -1,6 +1,6 @@
-"   =============== Plugins ===================
+"" PLUGINS
 packadd colorizer
 
-"   =============== Mappings ==================
+"" MAPPINGS
 nnoremap <leader>c :ColorToggle<CR>
 

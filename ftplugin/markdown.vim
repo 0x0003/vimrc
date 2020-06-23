@@ -1,10 +1,6 @@
-"   =============== Plugins ===================
-packadd goyo.vim
+"" PLUGINS
 packadd vim-easy-align
 
-"   =============== Mappings ==================
+"" MAPPINGS
 nmap     <leader>a          <nop>
-nnoremap <silent> <leader>g :Goyo<CR>:hi StatusLineNC ctermfg=235 <bar>
-                              \ set nonu nornu <bar>
-                              \ IndentGuidesToggle<CR>
 
