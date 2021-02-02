@@ -13,7 +13,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 " runtimepath lookup
 let g:UltiSnipsSnippetDirectories = ['snip', 'UltiSnips']
 " personal snippets dir
-let g:UltiSnipsSnippetsDir = "~/.vim/snip"
+let g:UltiSnipsSnippetsDir = "$HOME/.vim/snip"
 
 " # IndentGuides
 let g:indent_guides_enable_on_vim_startup = 1
@@ -48,7 +48,7 @@ augroup END
 
 "" GENERAL
 syntax on
-colorscheme monochrome
+colorscheme tuna
 
 set langnoremap
 set autoindent
@@ -84,7 +84,7 @@ augroup vimbak
   autocmd!
   autocmd BufWritePre * let &bex = '.' . strftime("%Y-%m-%d") . '.bak'
 augroup END
-set viminfo+=n~/.vim/.viminfo
+set viminfo+=n$HOME/.vim/.viminfo
 
 " wildmenu
 set wildmenu wildignorecase
@@ -112,7 +112,7 @@ set shiftwidth=2
 set listchars=tab:■■,trail:»,nbsp:■
 set list
 
-" jump to last known cursor position when opening vim
+" jump to last known cursor position when opening file
 augroup curpos
   autocmd!
   autocmd BufReadPost *
@@ -164,7 +164,7 @@ nnoremap <silent> <leader>w  :update<CR>
 xnoremap <silent> <leader>w  <esc>:update<CR>gv
 
 " reload vimrc
-nnoremap <silent> <leader>R  :source ~/.vim/vimrc<CR>
+nnoremap <silent> <leader>R  :source $HOME/.vim/vimrc<CR>
 
 " space as pgup and pgdown
 nnoremap <C-Space>           <C-b>
