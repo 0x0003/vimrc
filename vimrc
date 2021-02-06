@@ -69,6 +69,7 @@ set laststatus=0                " don't show statuslines on bottom splits
 set title                       " set window title as open file
 set ttimeoutlen=0               " fast keys
 set nrformats=                  " increment and subtract in decimal
+set colorcolumn=80
 
 " search format
 set ignorecase smartcase
@@ -189,14 +190,14 @@ xnoremap @                   :<C-u>call visualmacro#At()<CR>
 " ruler and showcmd
 nnoremap <silent> <leader>r  :set ruler! showcmd!<CR>:redraw!<CR>
 
+" open files down the tree
+nnoremap <leader>e           :e **/*
+nnoremap <leader>a           :arga **/*
+
 " marks
 nnoremap <silent> <leader>m  :marks<CR>:normal '
 nnoremap `                   '
 nnoremap '                   `
-
-" open files down the tree
-nnoremap <leader>e           :e **/*
-nnoremap <leader>a           :arga **/*
 
 " buffers
 nnoremap <leader>l           :ls<CR>:b<Space>
@@ -220,6 +221,9 @@ nnoremap <silent> <Up>       :resize -3<CR>
 nnoremap <silent> <leader>t  :tabnew<CR>
 nnoremap <silent> gK         :tabmove -1<CR>
 nnoremap <silent> gJ         :tabmove +1<CR>
+
+" registers
+nnoremap <silent> <leader>"  :reg0123456789<CR>
 
 " EasyAlign
 nmap     ga                  <Plug>(EasyAlign)
