@@ -48,7 +48,7 @@ augroup END
 
 "" GENERAL
 syntax on
-colorscheme tuna
+colorscheme tuna-rev
 
 set langnoremap
 set autoindent
