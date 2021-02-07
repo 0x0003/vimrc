@@ -1,6 +1,6 @@
 " Description: Highlighting is mostly based on dark version of hybrid.vim
 
-"   =============== INIT ======================
+" Init
 hi clear
 
 if exists("syntax_on")
@@ -9,7 +9,7 @@ endif
 
 let colors_name = "tuna"
 
-"   =============== HI ========================
+" Hi
 hi Normal          ctermfg=15   ctermbg=NONE cterm=NONE
 
 set background=dark
@@ -23,7 +23,7 @@ hi PreProc         ctermfg=14   ctermbg=NONE cterm=NONE
 hi Special         ctermfg=10   ctermbg=NONE cterm=NONE
 hi Statement       ctermfg=12   ctermbg=NONE cterm=NONE
 hi String          ctermfg=10   ctermbg=NONE cterm=NONE
-hi Todo            ctermfg=11   ctermbg=NONE cterm=NONE
+hi Todo            ctermfg=233  ctermbg=226  cterm=NONE
 hi Type            ctermfg=3    ctermbg=NONE cterm=NONE
 
 hi Error           ctermfg=15   ctermbg=1    cterm=underline
@@ -54,7 +54,7 @@ hi CursorLineNr    ctermfg=15   ctermbg=0    cterm=NONE
 hi StatusLine      ctermfg=237  ctermbg=248  cterm=reverse
 hi StatusLineNC    ctermfg=235  ctermbg=8    cterm=reverse
 
-hi Visual          ctermfg=NONE ctermbg=0    cterm=NONE
+hi Visual          ctermfg=NONE ctermbg=8    cterm=NONE
 
 hi FoldColumn      ctermfg=NONE ctermbg=234  cterm=NONE
 hi Folded          ctermfg=7    ctermbg=234  cterm=NONE
@@ -135,8 +135,13 @@ hi link diffOnly                 WarningMsg
 hi link diffRemoved              WarningMsg
 hi link diffAdded                Special
 
-"   =============== PLUGIN SPECIFIC ===========
+" Plugins
 " IndentGuides
+" " #121212  terminal bg
+" hi IndentGuidesOdd  ctermbg=234
+" hi IndentGuidesEven ctermbg=235
+
+" #1b1b1b terminal bg
 hi IndentGuidesOdd  ctermbg=235
 hi IndentGuidesEven ctermbg=236
 
