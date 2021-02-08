@@ -80,7 +80,6 @@ hi SpellLocal      ctermfg=6    ctermbg=24   cterm=underline
 hi SpellBad        ctermfg=1    ctermbg=52   cterm=underline
 hi SpellRare       ctermfg=5    ctermbg=53   cterm=underline
 
-"hi ColorColumn     ctermfg=NONE     ctermbg=0        cterm=NONE
 hi ColorColumn     ctermfg=125  ctermbg=NONE cterm=NONE
 hi SignColumn      ctermfg=NONE ctermbg=234  cterm=NONE
 
@@ -141,6 +140,8 @@ hi link diffAdded                Special
 " " #121212  terminal bg
 " hi IndentGuidesOdd  ctermbg=234
 " hi IndentGuidesEven ctermbg=235
+
 " #1b1b1b terminal bg
 hi IndentGuidesOdd  ctermbg=235
 hi IndentGuidesEven ctermbg=236
+

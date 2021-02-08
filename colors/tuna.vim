@@ -80,7 +80,6 @@ hi SpellLocal      ctermfg=14   ctermbg=24   cterm=underline
 hi SpellBad        ctermfg=9    ctermbg=52   cterm=underline
 hi SpellRare       ctermfg=13   ctermbg=53   cterm=underline
 
-"hi ColorColumn     ctermfg=NONE     ctermbg=0        cterm=NONE
 hi ColorColumn     ctermfg=125  ctermbg=NONE cterm=NONE
 hi SignColumn      ctermfg=NONE ctermbg=234  cterm=NONE
 
