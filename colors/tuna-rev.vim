@@ -35,6 +35,7 @@ hi NonText         ctermfg=0    ctermbg=NONE cterm=NONE
 
 hi Pmenu           ctermfg=7    ctermbg=0    cterm=NONE
 hi PmenuSel        ctermfg=7    ctermbg=0    cterm=reverse
+hi Wildmenu        ctermfg=8    ctermbg=7    cterm=NONE
 
 hi ErrorMsg        ctermfg=234  ctermbg=1    cterm=standout
 hi ModeMsg         ctermfg=2    ctermbg=NONE cterm=NONE
