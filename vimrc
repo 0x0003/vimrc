@@ -104,7 +104,7 @@ let g:vimsyn_folding = 'afP' " augr.vim;func.vim;python
 let g:sh_fold_enabled = 5    " if/for/do in shell scripts
 let g:javaScript_fold = 1    " js
 
-" tabs
+" tabs/spaces
 set expandtab
 set softtabstop=2
 set shiftwidth=2
@@ -160,10 +160,6 @@ command! Cclear cexpr []
 " leader
 let mapleader = "\<Space>"
 
-" write file
-nnoremap <silent> <leader>w  :update<CR>
-xnoremap <silent> <leader>w  <esc>:update<CR>gv
-
 " reload vimrc
 nnoremap <silent> <leader>R  :source $HOME/.vim/vimrc<CR>
 
@@ -175,24 +171,19 @@ xnoremap <C-Space>           <C-b>
 xnoremap <C-@>               <C-b>
 xnoremap <leader><Space>     <C-f>
 
-" clear hlsearch
-nnoremap <silent> Q          :noh<CR>
-
 " system clipboard copy/paste
 nnoremap <leader>y           "+y
 nnoremap <leader>Y           "+Y
 xnoremap <leader>y           "+y
 nnoremap <silent> <leader>P  :set paste<CR>"+p:set nopaste<CR>
 
-" execute macro over visual range
-xnoremap @                   :<C-u>call visualmacro#At()<CR>
-
-" ruler and showcmd
-nnoremap <silent> <leader>r  :set ruler! showcmd!<CR>:redraw!<CR>
-
 " open files down the tree
 nnoremap <leader>e           :e **/*
 nnoremap <leader>a           :arga **/*
+
+" write file
+nnoremap <silent> <leader>w  :update<CR>
+xnoremap <silent> <leader>w  <esc>:update<CR>gv
 
 " marks
 nnoremap <silent> <leader>m  :marks<CR>:normal '
@@ -225,6 +216,15 @@ nnoremap <silent> gJ         :tabmove +1<CR>
 " registers
 nnoremap <silent> <leader>"  :reg0123456789<CR>
 
+" clear hlsearch
+nnoremap <silent> Q          :noh<CR>
+
+" execute macro over visual range
+xnoremap @                   :<C-u>call visualmacro#At()<CR>
+
+" ruler and showcmd
+nnoremap <silent> <leader>r  :set ruler! showcmd!<CR>:redraw!<CR>
+
 " EasyAlign
 nmap     ga                  <Plug>(EasyAlign)
 xmap     ga                  <Plug>(EasyAlign)
@@ -239,6 +239,6 @@ nnoremap <silent> <leader>E  :Vexplore<CR>
 " undo tree
 nnoremap <silent> <leader>u  :UndotreeToggle<CR>
 
-" opt plugins
+" colorizer
 nnoremap <leader>c           :packadd colorizer<CR>:ColorToggle<CR>
 
