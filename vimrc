@@ -95,16 +95,6 @@ set wildignore^=*.bmp,*.gif,*.jpg,*.png,*.ico,*.bak,*.mkv,
   \*.wav,*.pdf,*.psd,*.zip,*.7z,*.tar,*.gz,*.exe,*.swp,
   \node_modules/*,bower_components/*,pack/*
 
-" folding
-set foldmethod=syntax
-set nofoldenable
-set foldlevel=99
-set foldclose=all
-set foldopen-=block
-let g:vimsyn_folding = 'afP' " augr.vim;func.vim;python
-let g:sh_fold_enabled = 5    " if/for/do in shell scripts
-let g:javaScript_fold = 1    " js
-
 " tabs/spaces
 set expandtab
 set softtabstop=2
@@ -226,10 +216,10 @@ xnoremap @                   :<C-u>call visualmacro#At()<CR>
 " EasyAlign
 nmap     ga                  <Plug>(EasyAlign)
 xmap     ga                  <Plug>(EasyAlign)
-nmap     <leader>A           :packadd vim-easy-align <bar>
-                                \ echo 'easy-align loaded'<CR>
-xmap     <leader>A           :<C-u>packadd vim-easy-align <bar>
-                                \ echo 'easy-align loaded'<CR>gv
+nnoremap     <leader>A       :packadd vim-easy-align <bar>
+                              \ echo 'easy-align loaded'<CR>
+xnoremap     <leader>A       :<C-u>packadd vim-easy-align <bar>
+                              \ echo 'easy-align loaded'<CR>gv
 
 " netrw
 nnoremap <silent> <leader>E  :Vexplore<CR>
