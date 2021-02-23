@@ -65,11 +65,12 @@ set history=100                 " command line history
 set sessionoptions-=options     " don't store global & local vars in a session
 set sessionoptions-=folds       " don't store folds in a session
 set mouse=a                     " enable mouse
-set laststatus=0                " don't show statuslines on bottom splits
+set laststatus=1                " don't show statusline with only 1 split
 set title                       " set window title as open file
 set ttimeoutlen=0               " fast keys
 set nrformats=                  " increment and subtract in decimal
 set colorcolumn=80
+set ruler
 
 " search format
 set ignorecase smartcase
@@ -221,9 +222,6 @@ nnoremap <silent> Q          :noh<CR>
 
 " execute macro over visual range
 xnoremap @                   :<C-u>call visualmacro#At()<CR>
-
-" ruler and showcmd
-nnoremap <silent> <leader>r  :set ruler! showcmd!<CR>:redraw!<CR>
 
 " EasyAlign
 nmap     ga                  <Plug>(EasyAlign)
