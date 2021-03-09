@@ -27,6 +27,9 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 let g:ale_open_list = 'on_save'
 
+" # Pear-tree
+let g:pear_tree_repeatable_expand = 0
+
 " # commentary.vim
 augroup commentary
   autocmd!
@@ -57,7 +60,6 @@ set autoread
 set scrolloff=5 sidescrolloff=5
 set splitbelow splitright
 set lazyredraw
-set noequalalways               " don't autoresize splits
 set hidden                      " jump between buffers w/o writing them
 set tabline=%!tabline#Tabline() " apply custom tabline
 set backspace=indent,eol,start  " backspace over everything

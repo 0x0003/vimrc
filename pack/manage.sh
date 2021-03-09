@@ -36,7 +36,7 @@ wait
 group autocomp start
 pak https://github.com/maralla/completor.vim.git &
 # parens/quotes/etc
-pak https://github.com/Raimondi/delimitMate.git &
+pak https://github.com/tmsvg/pear-tree.git &
 wait
 ) &
 
