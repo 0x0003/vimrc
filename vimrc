@@ -11,7 +11,7 @@ let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 " runtimepath lookup
-let g:UltiSnipsSnippetDirectories = ['snip', 'UltiSnips']
+let g:UltiSnipsSnippetDirectories = ["snip", "UltiSnips"]
 " personal snippets dir
 let g:UltiSnipsSnippetsDir = "$HOME/.vim/snip"
 
@@ -23,9 +23,9 @@ let g:indent_guides_tab_guides = 0
 let g:indent_guides_default_mapping = 0
 
 " # ALE
-let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_text_changed = "never"
 let g:ale_lint_on_insert_leave = 0
-let g:ale_open_list = 'on_save'
+let g:ale_open_list = "on_save"
 
 " # Pear-tree
 let g:pear_tree_repeatable_expand = 0
@@ -73,6 +73,7 @@ set ttimeoutlen=0               " fast keys
 set nrformats=                  " increment and subtract in decimal
 set colorcolumn=80
 set ruler
+set cursorline
 
 " search format
 set ignorecase smartcase
@@ -128,7 +129,7 @@ augroup bufpos
   autocmd!
   autocmd BufLeave * let b:winview = winsaveview()
   autocmd BufEnter *
-    \ if(exists('b:winview')) |
+    \ if(exists("b:winview")) |
     \   call winrestview(b:winview) |
     \ endif
 augroup END
@@ -219,9 +220,9 @@ xnoremap @                   :<C-u>call visualmacro#At()<CR>
 nmap     ga                  <Plug>(EasyAlign)
 xmap     ga                  <Plug>(EasyAlign)
 nnoremap     <leader>A       :packadd vim-easy-align <bar>
-                              \ echo 'easy-align loaded'<CR>
+                              \ echo "easy-align loaded"<CR>
 xnoremap     <leader>A       :<C-u>packadd vim-easy-align <bar>
-                              \ echo 'easy-align loaded'<CR>gv
+                              \ echo "easy-align loaded"<CR>gv
 
 " netrw
 nnoremap <silent> <leader>E  :Vexplore<CR>

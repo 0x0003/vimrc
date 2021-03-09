@@ -49,8 +49,8 @@ hi TabLineFill     ctermfg=234  ctermbg=8
 hi TabLineSel      ctermfg=15   ctermbg=236  cterm=NONE
 
 hi CursorColumn    ctermfg=NONE ctermbg=0    cterm=NONE
-hi CursorLine      ctermfg=NONE ctermbg=0    cterm=NONE
-hi CursorLineNr    ctermfg=15   ctermbg=0    cterm=NONE
+hi CursorLine      ctermfg=NONE ctermbg=235  cterm=NONE
+hi CursorLineNr    ctermfg=7    ctermbg=8    cterm=NONE
 
 hi StatusLine      ctermfg=235  ctermbg=7    cterm=reverse
 hi StatusLineNC    ctermfg=235  ctermbg=0    cterm=reverse
