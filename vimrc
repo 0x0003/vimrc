@@ -209,6 +209,7 @@ nnoremap <silent> gJ         :tabmove +1<CR>
 
 " registers
 nnoremap <silent> <leader>"  :reg0123456789<CR>
+nnoremap <silent> <leader>r  :call copyregister#Cp()<CR>
 
 " clear hlsearch
 nnoremap <silent> Q          :noh<CR>
