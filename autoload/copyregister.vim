@@ -1,4 +1,4 @@
-" copy from register 1 to any named register
+" copy contents of register 1 to any named register
 function! copyregister#Cp () abort
   let sourceReg = getreg(1, 1)
 

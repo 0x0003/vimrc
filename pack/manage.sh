@@ -33,9 +33,9 @@ wait
 ) &
 
 (
-group autocomp start
+group autocomplete start
 pak https://github.com/maralla/completor.vim.git &
-# parens/quotes/etc
+# parens, quotes, etc
 pak https://github.com/tmsvg/pear-tree.git &
 wait
 ) &
@@ -55,7 +55,7 @@ wait
 
 (
 group quality opt
-# highlight rgb and hex colors
+# highlight colors
 pak https://github.com/vim-scripts/colorizer.git &
 # auto alignment
 pak https://github.com/junegunn/vim-easy-align.git &
