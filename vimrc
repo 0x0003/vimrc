@@ -71,6 +71,7 @@ set laststatus=1                " don't show statusline with only 1 split
 set title                       " set window title as open file
 set ttimeoutlen=0               " fast keys
 set nrformats=                  " increment and subtract in decimal
+set shortmess=I                 " don't show intro message
 set colorcolumn=80
 set ruler
 set cursorline
