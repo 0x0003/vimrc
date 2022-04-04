@@ -67,7 +67,7 @@ set history=100                 " command line history
 set sessionoptions-=options     " don't store global & local vars in a session
 set sessionoptions-=folds       " don't store folds in a session
 set mouse=a                     " enable mouse
-set laststatus=1                " don't show statusline with only 1 split
+set laststatus=1                " don't show statusline with only 1 window
 set title                       " set window title as open file
 set ttimeoutlen=0               " fast keys
 set nrformats=                  " increment and subtract in decimal
@@ -118,7 +118,7 @@ augroup curpos
     \ endif
 augroup END
 
-" show line numbers only in active split
+" show line numbers only in active window
 set numberwidth=2
 augroup nurnu
   autocmd!
@@ -178,8 +178,8 @@ nnoremap <leader>e           :e **/*
 nnoremap <leader>a           :arga **/*
 
 " write file
-nnoremap <silent> <leader>w  :update<CR>
-xnoremap <silent> <leader>w  <esc>:update<CR>gv
+nnoremap <silent> <leader>s  :update<CR>
+xnoremap <silent> <leader>s  <esc>:update<CR>gv
 
 " marks
 nnoremap <silent> <leader>m  :marks<CR>:normal '
@@ -193,12 +193,18 @@ nnoremap <silent> <leader>n  :bn<CR>
 nnoremap <silent> <leader>p  :bp<CR>
 nnoremap <silent> <BS>       <C-^>
 
-" splits
+" windows
+nnoremap <silent> <leader>wf :close<CR>
 nnoremap <silent> <leader>f  :close<CR>
+nnoremap <silent> <leader>wh :call mvsplit#Mv ('h')<CR>
+nnoremap <silent> <leader>wj :call mvsplit#Mv ('j')<CR>
+nnoremap <silent> <leader>wk :call mvsplit#Mv ('k')<CR>
+nnoremap <silent> <leader>wl :call mvsplit#Mv ('l')<CR>
 nnoremap <silent> <C-h>      :call mvsplit#Mv ('h')<CR>
 nnoremap <silent> <C-j>      :call mvsplit#Mv ('j')<CR>
 nnoremap <silent> <C-k>      :call mvsplit#Mv ('k')<CR>
 nnoremap <silent> <C-l>      :call mvsplit#Mv ('l')<CR>
+nnoremap <silent> <leader>ww <C-w>w
 nnoremap <silent> <Right>    :vertical resize +3<CR>
 nnoremap <silent> <Left>     :vertical resize -3<CR>
 nnoremap <silent> <Down>     :resize +3<CR>
