@@ -53,6 +53,7 @@ augroup END
 syntax on
 colorscheme tuna-rev
 
+set novisualbell
 set langnoremap
 set autoindent
 set encoding=utf-8
