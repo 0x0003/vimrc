@@ -196,6 +196,7 @@ nnoremap <silent> <BS>       <C-^>
 
 " windows
 nnoremap <silent> <leader>wf :close<CR>
+nnoremap <silent> <leader>wd :close<CR>
 nnoremap <silent> <leader>f  :close<CR>
 nnoremap <silent> <leader>wh :call mvsplit#Mv ('h')<CR>
 nnoremap <silent> <leader>wj :call mvsplit#Mv ('j')<CR>
