@@ -175,7 +175,7 @@ xnoremap <leader>y           "+y
 nnoremap <silent> <leader>P  :set paste<CR>"+p:set nopaste<CR>
 
 " open files down the tree
-nnoremap <leader>e           :e **/*
+nnoremap <leader>o           :e **/*
 nnoremap <leader>a           :arga **/*
 
 " write file
@@ -236,7 +236,7 @@ xnoremap     <leader>A       :<C-u>packadd vim-easy-align <bar>
                               \ echo "easy-align loaded"<CR>gv
 
 " netrw
-nnoremap <silent> <leader>E  :Vexplore<CR>
+nnoremap <silent> <leader>e  :Lexplore<CR>
 
 " undo tree
 nnoremap <silent> <leader>u  :UndotreeToggle<CR>
