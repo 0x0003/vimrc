@@ -73,6 +73,7 @@ set title                       " set window title as open file
 set ttimeoutlen=0               " fast keys
 set nrformats=                  " increment and subtract in decimal
 set shortmess=I                 " don't show intro message
+set shortmess-=S                " show count of matches when searching
 set showcmd                     " show nm keypresses/size of the selected area
 set colorcolumn=80
 set ruler
