@@ -72,7 +72,9 @@ set laststatus=1                " don't show statusline with only 1 window
 set title                       " set window title as open file
 set ttimeoutlen=0               " fast keys
 set nrformats=                  " increment and subtract in decimal
-set shortmess=I                 " don't show intro message
+set shortmess+=I                " don't show intro message
+set shortmess+=F                " don't give the file info when editing a file
+set shortmess+=O                " msg for reading file overwrites any prev msg
 set shortmess-=S                " show count of matches when searching
 set showcmd                     " show nm keypresses/size of the selected area
 set colorcolumn=80
