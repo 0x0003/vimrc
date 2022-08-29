@@ -130,6 +130,13 @@ augroup nurnu
   autocmd WinLeave * setlocal norelativenumber
 augroup END
 
+" show cursorline only in active window
+augroup cursorLine
+  autocmd!
+  autocmd WinEnter,BufWinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
+augroup END
+
 " keep window position when switching buffers
 augroup bufpos
   autocmd!
