@@ -69,6 +69,12 @@ pak https://github.com/honza/vim-snippets.git &
 wait
 ) &
 
+(
+group lang start
+pak https://github.com/neovimhaskell/haskell-vim.git &
+wait
+)
+
 wait
 
 old_plugins=$(find ./*/*/*/.git -prune -mmin +5 -print | sed "s/\/.git//")
