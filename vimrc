@@ -44,7 +44,7 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 25
 let g:netrw_list_hide = &wildignore
 
-augroup netrw_mappings
+augroup mapnetrw
   autocmd!
   autocmd filetype netrw call netrwmappings#rebind()
 augroup END
@@ -53,14 +53,15 @@ augroup END
 syntax on
 colorscheme tuna-rev
 
-set novisualbell
 set langnoremap
-set autoindent
-set encoding=utf-8
 set autoread
-set scrolloff=5 sidescrolloff=5
-set splitbelow splitright
-set lazyredraw
+set belloff=all                 " don't nag me
+set novisualbell                " ^
+set autoindent                  " keep indentation when inserting newline
+set encoding=utf-8              " character encoding used inside vim
+set scrolloff=5 sidescrolloff=5 " lines to keep above/below/l/r of the cursor
+set splitbelow splitright       " default split locations
+set lazyredraw                  " don't redraw screen while executing macros
 set hidden                      " jump between buffers w/o writing them
 set tabline=%!tabline#Tabline() " apply custom tabline
 set backspace=indent,eol,start  " backspace over everything
@@ -68,18 +69,16 @@ set history=100                 " command line history
 set sessionoptions-=options     " don't store global & local vars in a session
 set sessionoptions-=folds       " don't store folds in a session
 set mouse=a                     " enable mouse
-set laststatus=1                " don't show statusline with only 1 window
+set laststatus=1                " don't display statusline with only 1 window
 set title                       " set window title as open file
 set ttimeoutlen=0               " fast keys
 set nrformats=                  " increment and subtract in decimal
-set shortmess+=I                " don't show intro message
-"set shortmess+=F                " don't give the file info when editing a file
+set shortmess+=I                " don't display intro message
 set shortmess+=O                " msg for reading file overwrites any prev msg
-set shortmess-=S                " show count of matches when searching
-set showcmd                     " show nm keypresses/size of the selected area
-set colorcolumn=80
-set ruler
-set cursorline
+set shortmess-=S                " display count of matches when searching
+set colorcolumn=80              " highlight 80th column
+set showcmd                     " display keypresses/size of the selected area
+set ruler                       " display cursor and viewbuffer positions
 
 " search format
 set ignorecase smartcase
@@ -113,7 +112,7 @@ set shiftwidth=2
 set listchars=tab:■■,trail:»,nbsp:■
 set list
 
-" jump to last known cursor position when opening file
+" jump to last known cursor position when opening a file
 augroup curpos
   autocmd!
   autocmd BufReadPost *
@@ -122,7 +121,7 @@ augroup curpos
     \ endif
 augroup END
 
-" show line numbers only in active window
+" display line numbers only in active window
 set numberwidth=2
 augroup nurnu
   autocmd!
@@ -130,8 +129,8 @@ augroup nurnu
   autocmd WinLeave * setlocal norelativenumber
 augroup END
 
-" show cursorline only in active window
-augroup cursorLine
+" display cursorline only in active window
+augroup cline
   autocmd!
   autocmd WinEnter,BufWinEnter * setlocal cursorline
   autocmd WinLeave * setlocal nocursorline
@@ -156,7 +155,7 @@ augroup sess
   autocmd VimLeave * :call sessions#Make()
 augroup END
 
-"" CUSTOM COMMANDS
+"" CUSTOM EX COMMANDS
 " trim trailing whitespaces
 command! Trim call trimspace#Trim()
 
