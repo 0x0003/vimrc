@@ -11,7 +11,12 @@ snippet = "Type constraint"
 ${1:Type} => $0
 endsnippet
 
-snippet :: "Type signature"
-${VISUAL}${1:f} :: $0
+snippet :: "New function"
+${1:f} :: ${2:a -> a}
+$1${3} = ${0:undefined}
+endsnippet
+
+snippet | "List comprehension"
+[${1:x} | ${2:$1} <- ${3:xs}$0]
 endsnippet
 
