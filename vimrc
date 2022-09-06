@@ -79,6 +79,7 @@ set shortmess-=S                " display count of matches when searching
 set colorcolumn=80              " highlight 80th column
 set showcmd                     " display keypresses/size of the selected area
 set ruler                       " display cursor and viewbuffer positions
+set fillchars+=vert:│           " character used to draw vertial borders
 
 " search format
 set ignorecase smartcase
