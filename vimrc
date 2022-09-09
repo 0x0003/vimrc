@@ -55,6 +55,7 @@ colorscheme tuna-rev
 
 set langnoremap
 set autoread
+set relativenumber              " display line numbers relative to the cursor
 set belloff=all                 " don't nag me
 set novisualbell                " ^
 set autoindent                  " keep indentation when inserting newline
@@ -120,14 +121,6 @@ augroup curpos
     \ if line("'\"") >= 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
-augroup END
-
-" display line numbers only in active window
-set numberwidth=2
-augroup nurnu
-  autocmd!
-  autocmd WinEnter,BufWinEnter * setlocal relativenumber
-  autocmd WinLeave * setlocal norelativenumber
 augroup END
 
 " display cursorline only in active window
