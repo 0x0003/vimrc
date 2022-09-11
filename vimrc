@@ -163,14 +163,6 @@ let mapleader = "\<Space>"
 " reload vimrc
 nnoremap <silent> <leader>R  :source $HOME/.vim/vimrc<CR>
 
-" space as pgup and pgdown
-nnoremap <C-Space>           <C-b>
-nnoremap <C-@>               <C-b>
-nnoremap <leader><Space>     <C-f>
-xnoremap <C-Space>           <C-b>
-xnoremap <C-@>               <C-b>
-xnoremap <leader><Space>     <C-f>
-
 " system clipboard copy/paste
 nnoremap <leader>y           "+y
 nnoremap <leader>Y           "+Y
@@ -180,6 +172,8 @@ nnoremap <silent> <leader>P  :set paste<CR>"+p:set nopaste<CR>
 " open files down the tree
 nnoremap <leader>o           :e **/*
 nnoremap <leader>a           :arga **/*
+nnoremap <C-Space>           :e **/*
+nnoremap <C-@>               :e **/*
 
 " write file
 nnoremap <silent> <leader>s  :update<CR>
@@ -192,6 +186,7 @@ nnoremap '                   `
 
 " buffers
 nnoremap <leader>l           :ls<CR>:b<Space>
+nnoremap <leader><Space>     :ls<CR>:b<Space>
 nnoremap <leader>d           :ls<CR>:bd<Space>
 nnoremap <silent> <leader>n  :bn<CR>
 nnoremap <silent> <leader>p  :bp<CR>
