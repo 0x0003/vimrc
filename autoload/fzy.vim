@@ -1,3 +1,4 @@
+" `fzy` integration
 function! fzy#Command(choice_command, fzy_args, vim_command) abort
   try
     let selection = system(a:choice_command . " | fzy " . a:fzy_args)

@@ -46,7 +46,7 @@ let g:netrw_list_hide = &wildignore
 
 augroup mapnetrw
   autocmd!
-  autocmd filetype netrw call netrwmappings#rebind()
+  autocmd filetype netrw call netrwmappings#Rebind()
 augroup END
 
 "" GENERAL
