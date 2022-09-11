@@ -215,11 +215,12 @@ nnoremap <silent> <Up>       :resize -3<CR>
 nnoremap <silent> <leader>"  :reg0123456789<CR>
 nnoremap <silent> <leader>r  :call copyregister#Cp()<CR>
 
-" clear hlsearch
-nnoremap <silent> <leader>Q  :noh<CR>
+" macros
+xnoremap <silent> @          :<C-u>call macros#Visual()<CR>
+nnoremap <silent> Q          :call macros#RepeatLast()<CR>
 
-" execute macro over visual range
-xnoremap @                   :<C-u>call visualmacro#At()<CR>
+" clear hlsearch
+nnoremap <silent> <leader>/  :noh<CR>
 
 " EasyAlign
 nmap     ga                  <Plug>(EasyAlign)
