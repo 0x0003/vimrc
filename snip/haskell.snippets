@@ -20,3 +20,16 @@ snippet | "List comprehension"
 [${1:x} | ${2:$1} <- ${3:xs}$0]
 endsnippet
 
+snippet der "deriving"
+deriving ${1:(${2:Eq}, ${3:Show}$4)}$0
+endsnippet
+
+snippet nt "newtype"
+newtype ${1:Type} = ${2:$1} ${0:Int}
+endsnippet
+
+snippet pr "Language Pragma"
+{-# LANGUAGE ${1:GeneralizedNewtypeDeriving} #-}
+$0
+endsnippet
+
