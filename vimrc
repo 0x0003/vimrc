@@ -170,10 +170,16 @@ xnoremap <leader>y           "+y
 nnoremap <silent> <leader>P  :set paste<CR>"+p:set nopaste<CR>
 
 " open files down the tree
-nnoremap <leader>o           :e **/*
+if executable ('fzy')
+  nnoremap <leader>e         :call fzy#Edit()<CR>
+  nnoremap <C-Space>         :call fzy#Edit()<CR>
+  nnoremap <C-@>             :call fzy#Edit()<CR>
+else
+  nnoremap <leader>e         :e **/*
+  nnoremap <C-Space>         :e **/*
+  nnoremap <C-@>             :e **/*
+endif
 nnoremap <leader>a           :arga **/*
-nnoremap <C-Space>           :e **/*
-nnoremap <C-@>               :e **/*
 
 " write file
 nnoremap <silent> <leader>s  :update<CR>
@@ -185,9 +191,15 @@ nnoremap `                   '
 nnoremap '                   `
 
 " buffers
-nnoremap <leader>l           :ls<CR>:b<Space>
-nnoremap <leader><Space>     :ls<CR>:b<Space>
-nnoremap <leader>d           :ls<CR>:bd<Space>
+if executable ('fzy')
+  nnoremap <leader>l         :call fzy#Buffer(':b')<CR>
+  nnoremap <leader><Space>   :call fzy#Buffer(':b')<CR>
+  nnoremap <leader>d         :call fzy#Buffer(':bd')<CR>
+else
+  nnoremap <leader>l         :ls<CR>:b<Space>
+  nnoremap <leader><Space>   :ls<CR>:b<Space>
+  nnoremap <leader>d         :ls<CR>:bd<Space>
+endif
 nnoremap <silent> <leader>n  :bn<CR>
 nnoremap <silent> <leader>p  :bp<CR>
 nnoremap <silent> <BS>       <C-^>
@@ -234,7 +246,7 @@ xnoremap     <leader>A       :<C-u>packadd vim-easy-align <bar>
                               \ echo "easy-align loaded"<CR>gv
 
 " netrw
-nnoremap <silent> <leader>e  :Lexplore<CR>
+nnoremap <silent> <leader>E  :Lexplore<CR>
 
 " undo tree
 nnoremap <silent> <leader>u  :UndotreeToggle<CR>
