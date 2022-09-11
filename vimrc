@@ -169,7 +169,7 @@ nnoremap <leader>Y           "+Y
 xnoremap <leader>y           "+y
 nnoremap <silent> <leader>P  :set paste<CR>"+p:set nopaste<CR>
 
-" open files down the tree
+" files
 if executable ('fzy')
   nnoremap <leader>e         :call fzy#Edit()<CR>
   nnoremap <C-Space>         :call fzy#Edit()<CR>
@@ -180,10 +180,6 @@ else
   nnoremap <C-@>             :e **/*
 endif
 nnoremap <leader>a           :arga **/*
-
-" write file
-nnoremap <silent> <leader>s  :update<CR>
-xnoremap <silent> <leader>s  <esc>:update<CR>gv
 
 " marks
 nnoremap <silent> <leader>m  :marks<CR>:normal '
@@ -205,34 +201,22 @@ nnoremap <silent> <leader>p  :bp<CR>
 nnoremap <silent> <BS>       <C-^>
 
 " windows
-nnoremap <silent> <leader>wf :close<CR>
-nnoremap <silent> <leader>wd :close<CR>
 nnoremap <silent> <leader>f  :close<CR>
-nnoremap <silent> <leader>wh :call mvsplit#Mv ('h')<CR>
-nnoremap <silent> <leader>wj :call mvsplit#Mv ('j')<CR>
-nnoremap <silent> <leader>wk :call mvsplit#Mv ('k')<CR>
-nnoremap <silent> <leader>wl :call mvsplit#Mv ('l')<CR>
 nnoremap <silent> <C-h>      :call mvsplit#Mv ('h')<CR>
 nnoremap <silent> <C-j>      :call mvsplit#Mv ('j')<CR>
 nnoremap <silent> <C-k>      :call mvsplit#Mv ('k')<CR>
 nnoremap <silent> <C-l>      :call mvsplit#Mv ('l')<CR>
-nnoremap <silent> <leader>ww <C-w>w
 nnoremap <silent> <Right>    :vertical resize +3<CR>
 nnoremap <silent> <Left>     :vertical resize -3<CR>
 nnoremap <silent> <Down>     :resize +3<CR>
 nnoremap <silent> <Up>       :resize -3<CR>
-
-" tabs
-nnoremap <silent> <leader>t  :tabnew<CR>
-nnoremap <silent> gK         :tabmove -1<CR>
-nnoremap <silent> gJ         :tabmove +1<CR>
 
 " registers
 nnoremap <silent> <leader>"  :reg0123456789<CR>
 nnoremap <silent> <leader>r  :call copyregister#Cp()<CR>
 
 " clear hlsearch
-nnoremap <silent> Q          :noh<CR>
+nnoremap <silent> <leader>Q  :noh<CR>
 
 " execute macro over visual range
 xnoremap @                   :<C-u>call visualmacro#At()<CR>
