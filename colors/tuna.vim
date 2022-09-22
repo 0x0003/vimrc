@@ -14,7 +14,7 @@ hi Normal          ctermfg=15   ctermbg=NONE cterm=NONE
 
 set background=dark
 
-hi Comment         ctermfg=8    ctermbg=NONE cterm=NONE
+hi Comment         ctermfg=8    ctermbg=NONE cterm=italic
 hi Conceal         ctermfg=15   ctermbg=NONE cterm=NONE
 hi Constant        ctermfg=9    ctermbg=NONE cterm=NONE
 hi Function        ctermfg=11   ctermbg=NONE cterm=NONE
