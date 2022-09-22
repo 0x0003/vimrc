@@ -123,11 +123,12 @@ augroup curpos
     \ endif
 augroup END
 
-" display cursorline only in active window
+" display cursorline only in active window and only in normal mode
 augroup cline
   autocmd!
   autocmd WinEnter,BufWinEnter * setlocal cursorline
   autocmd WinLeave * setlocal nocursorline
+  autocmd InsertEnter,InsertLeave * set cursorline!
 augroup END
 
 " keep window position when switching buffers
