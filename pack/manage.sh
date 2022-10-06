@@ -44,6 +44,7 @@ pak https://github.com/machakann/vim-sandwich.git &
 pak https://github.com/tpope/vim-commentary.git &
 pak https://github.com/nathanaelkane/vim-indent-guides.git &
 pak https://github.com/mbbill/undotree.git &
+pak https://github.com/tpope/vim-fugitive &
 wait
 ) &
 
