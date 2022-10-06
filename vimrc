@@ -224,11 +224,11 @@ nnoremap <silent> Q          :call macros#RepeatLast()<CR>
 nnoremap <silent> <leader>/  :noh<CR>
 
 " EasyAlign
-nmap     ga                  <Plug>(EasyAlign)
-xmap     ga                  <Plug>(EasyAlign)
-nnoremap     <leader>A       :packadd vim-easy-align <bar>
+nmap ga                      <Plug>(EasyAlign)
+xmap ga                      <Plug>(EasyAlign)
+nnoremap <leader>A           :packadd vim-easy-align <bar>
                               \ echo "easy-align loaded"<CR>
-xnoremap     <leader>A       :<C-u>packadd vim-easy-align <bar>
+xnoremap <leader>A           :<C-u>packadd vim-easy-align <bar>
                               \ echo "easy-align loaded"<CR>gv
 
 " netrw
