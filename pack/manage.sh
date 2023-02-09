@@ -64,6 +64,7 @@ wait
 (
 group lang start
 pak https://github.com/neovimhaskell/haskell-vim.git &
+pak https://github.com/dag/vim-fish.git &
 wait
 ) &
 

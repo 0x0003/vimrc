@@ -1,5 +1,10 @@
 filetype plugin indent on
 
+" set POSIX compatible shell if using fish
+if &shell =~# 'fish$'
+  set shell=sh
+endif
+
 "" PLUGINS
 " # Completor
 let g:completor_completion_delay = 1 " milliseconds
