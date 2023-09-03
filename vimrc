@@ -172,8 +172,15 @@ nnoremap <silent> <leader>R  :source $HOME/.vim/vimrc<CR>
 " system clipboard copy/paste
 nnoremap <leader>y           "+y
 nnoremap <leader>Y           "+Y
-xnoremap <leader>y           "+y
-nnoremap <silent> <leader>P  :set paste<CR>"+p:set nopaste<CR>
+" detect if running under wsl
+if executable ('/mnt/c/Windows/System32/clip.exe')
+  nnoremap <F1>                :set paste <bar> echo "paste"<CR>
+  nnoremap <F2>                :set nopaste <bar> echo "nopaste"<CR>
+  xnoremap <leader>y           :w !clip.exe<CR><CR>
+else
+  xnoremap <leader>y           "+y
+  nnoremap <silent> <leader>P  :set paste<CR>"+p:set nopaste<CR>
+endif
 
 " files
 if executable ('fzy')
