@@ -188,7 +188,7 @@ if executable ('fzy')
   nnoremap <C-Space>         :call fzy#Edit()<CR>
   nnoremap <C-@>             :call fzy#Edit()<CR>
 else
-  nnoremap <leader>e         :e **/*
+  nnoremap <leader>o         :e **/*
   nnoremap <C-Space>         :e **/*
   nnoremap <C-@>             :e **/*
 endif
@@ -244,7 +244,7 @@ xnoremap <leader>A           :<C-u>packadd vim-easy-align <bar>
                               \ echo "easy-align loaded"<CR>gv
 
 " netrw
-nnoremap <silent> <leader>E  :Lexplore<CR>
+nnoremap <silent> <leader>e  :Lexplore<CR>
 
 " undo tree
 nnoremap <silent> <leader>u  :UndotreeToggle<CR>
