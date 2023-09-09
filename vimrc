@@ -233,7 +233,7 @@ xnoremap <silent> @          :<C-u>call macros#Visual()<CR>
 nnoremap <silent> Q          :call macros#RepeatLast()<CR>
 
 " clear hlsearch
-nnoremap <silent> <leader>Q  :noh<CR>
+nnoremap <silent> <leader>\  :noh<CR>
 
 " EasyAlign
 nmap ga                      <Plug>(EasyAlign)
