@@ -235,6 +235,21 @@ nnoremap <silent> Q          :call macros#RepeatLast()<CR>
 " clear hlsearch
 nnoremap <silent> <leader>\  :noh<CR>
 
+" japanese IME
+nnoremap ｈ   h
+nnoremap ｊ   j
+nnoremap ｋ   k
+nnoremap ｌ   l
+nnoremap ｒ   r
+nnoremap あ   a
+nnoremap い   i
+nnoremap う   u
+nnoremap お   o
+nnoremap っｄ dd
+nnoremap っｙ yy
+nnoremap し”  ci"
+nnoremap し’  ci\'
+
 " EasyAlign
 nmap ga                      <Plug>(EasyAlign)
 xmap ga                      <Plug>(EasyAlign)
