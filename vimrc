@@ -173,10 +173,10 @@ nnoremap <silent> <leader>R  :source $HOME/.vim/vimrc<CR>
 nnoremap <leader>y           "+y
 nnoremap <leader>Y           "+Y
 " detect if running under wsl
-if executable ('/mnt/c/Windows/System32/clip.exe')
-  nnoremap <F1>                :set paste <bar> echo "paste"<CR>
-  nnoremap <F2>                :set nopaste <bar> echo "nopaste"<CR>
-  xnoremap <leader>y           :w !clip.exe<CR><CR>
+if !empty($WSL_DISTRO_NAME)
+  xnoremap <leader>y           :w !win32yank.exe -i --crlf<CR><CR>
+  nnoremap <silent> <leader>P  :set paste<CR>:r !win32yank.exe -o --lf<CR>
+                                \:set nopaste<CR>
 else
   xnoremap <leader>y           "+y
   nnoremap <silent> <leader>P  :set paste<CR>"+p:set nopaste<CR>
