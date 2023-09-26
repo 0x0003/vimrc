@@ -167,32 +167,32 @@ command! Cclear cexpr []
 let mapleader = "\<Space>"
 
 " reload vimrc
-nnoremap <silent> <leader>R  :source $HOME/.vim/vimrc<CR>
+nnoremap <silent> <leader>R :source $HOME/.vim/vimrc<CR>
 
 " system clipboard copy/paste
-nnoremap <leader>y           "+y
-nnoremap <leader>Y           "+Y
+nnoremap <silent> <leader>y "+y
+nnoremap <silent> <leader>Y "+Y
 " detect if running under wsl
 if !empty($WSL_DISTRO_NAME)
-  xnoremap <leader>y           :w !win32yank.exe -i --crlf<CR><CR>
-  nnoremap <silent> <leader>P  :set paste<CR>:r !win32yank.exe -o --lf<CR>
-                                \:set nopaste<CR>
+  xnoremap <silent> <leader>y :w !win32yank.exe -i --crlf<CR><CR>
+  nnoremap <silent> <leader>P :set paste<CR>:r !win32yank.exe -o --lf<CR>
+                               \:set nopaste<CR>
 else
-  xnoremap <leader>y           "+y
-  nnoremap <silent> <leader>P  :set paste<CR>"+p:set nopaste<CR>
+  xnoremap <silent> <leader>y "+y
+  nnoremap <silent> <leader>P :set paste<CR>"+p:set nopaste<CR>
 endif
 
 " files
 if executable ('fzy')
-  nnoremap <leader>e         :call fzy#Edit()<CR>
-  nnoremap <C-Space>         :call fzy#Edit()<CR>
-  nnoremap <C-@>             :call fzy#Edit()<CR>
+  nnoremap <leader>e :call fzy#Edit()<CR>
+  nnoremap <C-Space> :call fzy#Edit()<CR>
+  nnoremap <C-@>     :call fzy#Edit()<CR>
 else
-  nnoremap <leader>o         :e **/*
-  nnoremap <C-Space>         :e **/*
-  nnoremap <C-@>             :e **/*
+  nnoremap <leader>o :e **/*
+  nnoremap <C-Space> :e **/*
+  nnoremap <C-@>     :e **/*
 endif
-nnoremap <leader>a           :arga **/*
+nnoremap <leader>a   :arga **/*
 
 " marks
 nnoremap <silent> <leader>m  :marks<CR>:normal '
@@ -201,39 +201,39 @@ nnoremap '                   `
 
 " buffers
 if executable ('fzy')
-  nnoremap <leader>l         :call fzy#Buffer(':b')<CR>
-  nnoremap <leader><Space>   :call fzy#Buffer(':b')<CR>
-  nnoremap <leader>d         :call fzy#Buffer(':bd')<CR>
+  nnoremap <leader>l       :call fzy#Buffer(':b')<CR>
+  nnoremap <leader><Space> :call fzy#Buffer(':b')<CR>
+  nnoremap <leader>d       :call fzy#Buffer(':bd')<CR>
 else
-  nnoremap <leader>l         :ls<CR>:b<Space>
-  nnoremap <leader><Space>   :ls<CR>:b<Space>
-  nnoremap <leader>d         :ls<CR>:bd<Space>
+  nnoremap <leader>l       :ls<CR>:b<Space>
+  nnoremap <leader><Space> :ls<CR>:b<Space>
+  nnoremap <leader>d       :ls<CR>:bd<Space>
 endif
-nnoremap <silent> <leader>n  :bn<CR>
-nnoremap <silent> <leader>p  :bp<CR>
-nnoremap <silent> <BS>       <C-^>
+nnoremap <silent> <leader>n :bn<CR>
+nnoremap <silent> <leader>p :bp<CR>
+nnoremap <silent> <BS>      <C-^>
 
 " windows
-nnoremap <silent> <leader>f  :close<CR>
-nnoremap <silent> <C-h>      :call mvsplit#Mv ('h')<CR>
-nnoremap <silent> <C-j>      :call mvsplit#Mv ('j')<CR>
-nnoremap <silent> <C-k>      :call mvsplit#Mv ('k')<CR>
-nnoremap <silent> <C-l>      :call mvsplit#Mv ('l')<CR>
-nnoremap <silent> <Right>    :vertical resize +3<CR>
-nnoremap <silent> <Left>     :vertical resize -3<CR>
-nnoremap <silent> <Down>     :resize +3<CR>
-nnoremap <silent> <Up>       :resize -3<CR>
+nnoremap <silent> <leader>f :close<CR>
+nnoremap <silent> <C-h>     :call mvsplit#Mv ('h')<CR>
+nnoremap <silent> <C-j>     :call mvsplit#Mv ('j')<CR>
+nnoremap <silent> <C-k>     :call mvsplit#Mv ('k')<CR>
+nnoremap <silent> <C-l>     :call mvsplit#Mv ('l')<CR>
+nnoremap <silent> <Right>   :vertical resize +3<CR>
+nnoremap <silent> <Left>    :vertical resize -3<CR>
+nnoremap <silent> <Down>    :resize +3<CR>
+nnoremap <silent> <Up>      :resize -3<CR>
 
 " registers
-nnoremap <silent> <leader>"  :reg0123456789<CR>
-nnoremap <silent> <leader>r  :call copyregister#Cp()<CR>
+nnoremap <silent> <leader>" :reg0123456789<CR>
+nnoremap <silent> <leader>r :call copyregister#Cp()<CR>
 
 " macros
-xnoremap <silent> @          :<C-u>call macros#Visual()<CR>
-nnoremap <silent> Q          :call macros#RepeatLast()<CR>
+xnoremap <silent> @ :<C-u>call macros#Visual()<CR>
+nnoremap <silent> Q :call macros#RepeatLast()<CR>
 
 " clear hlsearch
-nnoremap <silent> <leader>\  :noh<CR>
+nnoremap <silent> <leader>\ :noh<CR>
 
 " japanese IME
 nnoremap ｈ   h
@@ -250,20 +250,29 @@ nnoremap っｙ yy
 nnoremap し”  ci"
 nnoremap し’  ci\'
 
+" emacs-style command-line editing
+cnoremap <C-A> <Home>
+cnoremap <C-B> <Left>
+cnoremap <C-D> <Del>
+cnoremap <C-E> <End>
+cnoremap <C-F> <Right>
+cnoremap <C-N> <Down>
+cnoremap <C-P> <Up>
+
 " EasyAlign
-nmap ga                      <Plug>(EasyAlign)
-xmap ga                      <Plug>(EasyAlign)
-nnoremap <leader>A           :packadd vim-easy-align <bar>
-                              \ echo "easy-align loaded"<CR>
-xnoremap <leader>A           :<C-u>packadd vim-easy-align <bar>
-                              \ echo "easy-align loaded"<CR>gv
+nnoremap <leader>A :packadd vim-easy-align <bar>
+                    \ echo "easy-align loaded"<CR>
+xnoremap <leader>A :<C-u>packadd vim-easy-align <bar>
+                    \ echo "easy-align loaded"<CR>gv
+nmap ga            <Plug>(EasyAlign)
+xmap ga            <Plug>(EasyAlign)
 
 " netrw
-nnoremap <silent> <leader>e  :Lexplore<CR>
+nnoremap <silent> <leader>e :Lexplore<CR>
 
 " undo tree
-nnoremap <silent> <leader>u  :UndotreeToggle<CR>
+nnoremap <silent> <leader>u :UndotreeToggle<CR>
 
 " colorizer
-nnoremap <leader>c           :packadd colorizer<CR>:ColorToggle<CR>
+nnoremap <leader>c :packadd colorizer<CR>:ColorToggle<CR>
 
