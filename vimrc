@@ -214,15 +214,17 @@ nnoremap <silent> <leader>p :bp<CR>
 nnoremap <silent> <BS>      <C-^>
 
 " windows
-nnoremap <silent> <leader>f :close<CR>
-nnoremap <silent> <C-h>     :call mvsplit#Mv ('h')<CR>
-nnoremap <silent> <C-j>     :call mvsplit#Mv ('j')<CR>
-nnoremap <silent> <C-k>     :call mvsplit#Mv ('k')<CR>
-nnoremap <silent> <C-l>     :call mvsplit#Mv ('l')<CR>
-nnoremap <silent> <Right>   :vertical resize +3<CR>
-nnoremap <silent> <Left>    :vertical resize -3<CR>
-nnoremap <silent> <Down>    :resize +3<CR>
-nnoremap <silent> <Up>      :resize -3<CR>
+nnoremap <silent> <leader>w  <C-w>
+nnoremap <silent> <leader>wd <C-w>c
+nnoremap <silent> <leader>f  :close<CR>
+nnoremap <silent> <C-h>      :call mvsplit#Mv ('h')<CR>
+nnoremap <silent> <C-j>      :call mvsplit#Mv ('j')<CR>
+nnoremap <silent> <C-k>      :call mvsplit#Mv ('k')<CR>
+nnoremap <silent> <C-l>      :call mvsplit#Mv ('l')<CR>
+nnoremap <silent> <Right>    :vertical resize +3<CR>
+nnoremap <silent> <Left>     :vertical resize -3<CR>
+nnoremap <silent> <Down>     :resize +3<CR>
+nnoremap <silent> <Up>       :resize -3<CR>
 
 " registers
 nnoremap <silent> <leader>" :reg0123456789<CR>
