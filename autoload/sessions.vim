@@ -2,8 +2,7 @@
 function! sessions#Make() abort
   let b:sessiondir = $HOME . "/.vim/.backup/sessions" . getcwd()
   if (filewritable(b:sessiondir) != 2)
-    " NOTE: fails on directories with aphostrophes in their names
-    exe 'silent !mkdir -p ' . "'" . b:sessiondir . "'"
+    exe 'silent !mkdir -p ' . shellescape(b:sessiondir, 1)
     redraw!
   endif
   let b:filename = b:sessiondir . '/session.vim'
