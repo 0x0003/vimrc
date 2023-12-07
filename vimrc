@@ -116,7 +116,7 @@ set softtabstop=2
 set shiftwidth=2
 
 " list variables
-set listchars=tab:■■,trail:»,nbsp:■
+set listchars=tab:━━⭾,trail:»,nbsp:⍽
 set list
 
 " jump to last known cursor position when opening a file
