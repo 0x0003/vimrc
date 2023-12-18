@@ -87,6 +87,11 @@ set showcmd                     " display keypresses/size of the selected area
 set ruler                       " display cursor and viewbuffer positions
 set fillchars+=vert:\           " (space) char used to draw vertical borders
 
+" wrap long lines
+set wrap
+set linebreak
+set showbreak=›\ 
+
 " search format
 set ignorecase smartcase
 set incsearch hlsearch
