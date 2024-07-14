@@ -191,7 +191,6 @@ endif
 nnoremap <leader>o :e **/*
 nnoremap <C-Space> :e **/*
 nnoremap <C-@>     :e **/*
-endif
 nnoremap <leader>a   :arga **/*
 
 " marks
@@ -203,7 +202,6 @@ nnoremap '                   `
 nnoremap <leader>l       :ls<CR>:b<Space>
 nnoremap <leader><Space> :ls<CR>:b<Space>
 nnoremap <leader>d       :ls<CR>:bd<Space>
-endif
 nnoremap <silent> <leader>n :bn<CR>
 nnoremap <silent> <leader>p :bp<CR>
 nnoremap <silent> <BS>      <C-^>
