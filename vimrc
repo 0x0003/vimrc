@@ -188,14 +188,9 @@ else
 endif
 
 " files
-if executable ('fzy')
-  nnoremap <leader>e :call fzy#Edit()<CR>
-  nnoremap <C-Space> :call fzy#Edit()<CR>
-  nnoremap <C-@>     :call fzy#Edit()<CR>
-else
-  nnoremap <leader>o :e **/*
-  nnoremap <C-Space> :e **/*
-  nnoremap <C-@>     :e **/*
+nnoremap <leader>o :e **/*
+nnoremap <C-Space> :e **/*
+nnoremap <C-@>     :e **/*
 endif
 nnoremap <leader>a   :arga **/*
 
@@ -205,14 +200,9 @@ nnoremap `                   '
 nnoremap '                   `
 
 " buffers
-if executable ('fzy')
-  nnoremap <leader>l       :call fzy#Buffer(':b')<CR>
-  nnoremap <leader><Space> :call fzy#Buffer(':b')<CR>
-  nnoremap <leader>d       :call fzy#Buffer(':bd')<CR>
-else
-  nnoremap <leader>l       :ls<CR>:b<Space>
-  nnoremap <leader><Space> :ls<CR>:b<Space>
-  nnoremap <leader>d       :ls<CR>:bd<Space>
+nnoremap <leader>l       :ls<CR>:b<Space>
+nnoremap <leader><Space> :ls<CR>:b<Space>
+nnoremap <leader>d       :ls<CR>:bd<Space>
 endif
 nnoremap <silent> <leader>n :bn<CR>
 nnoremap <silent> <leader>p :bp<CR>
